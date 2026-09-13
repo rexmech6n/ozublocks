@@ -13,12 +13,14 @@ OzUBlocks
 **Summary** (comes from `manifest.json`, 132 characters max)
 
 ```
-Özyeğin SIS ders programınızı takvim dosyası olarak kaydeder. Üniversite ile resmî bir bağlantısı yoktur.
+Turn every class into a calendar block. Özyeğin SIS ders programınızı takvime aktarır. Üniversite ile resmî bir bağlantısı yoktur.
 ```
 
 **Description**
 
 ```
+Turn every class into a calendar block.
+
 OzUBlocks, Özyeğin Üniversitesi SIS'teki haftalık ders programınızı okur ve dönem boyunca her hafta tekrar eden bir takvim dosyasına (.ics) çevirir. Dosyayı Google Takvim, Apple Takvim veya Outlook'a içe aktarabilirsiniz.
 
 Nasıl çalışır:

@@ -53,8 +53,16 @@ h1 {
   letter-spacing: -0.015em;
 }
 
-.sub {
+.motto {
   margin: 1px 0 0;
+  color: var(--brand-strong);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.sub {
+  margin: 3px 0 0;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.4;

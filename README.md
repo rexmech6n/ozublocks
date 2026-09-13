@@ -4,6 +4,8 @@
 
 <h1 align="center">OzUBlocks</h1>
 
+<p align="center"><strong>Turn every class into a calendar block.</strong></p>
+
 <p align="center">
   A browser extension that turns your Özyeğin University SIS course schedule into a calendar file that repeats every week of the semester.
 </p>
