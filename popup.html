@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>OzUBlocks</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<header class="head">
+  <img class="logo" src="icons/icon128.png" alt="" width="36" height="36">
+  <div>
+    <h1>OzUBlocks</h1>
+    <p class="sub">SIS'ten derslerinizi tespit edip dönem boyunca tekrar eden bir takvim dosyası oluşturur.</p>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <div class="field-row">
+      <label class="field">
+        <span>Dönem başlangıcı</span>
+        <input type="date" id="termStart" value="2026-09-21">
+      </label>
+      <label class="field">
+        <span>Dönem bitişi</span>
+        <input type="date" id="termEnd" value="2026-12-25">
+      </label>
+    </div>
+    <small class="note">Resmî tatillere denk gelen dersler takvimden otomatik çıkarılır.</small>
+  </section>
+
+  <button id="read" class="btn btn-soft">
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="btn-label">Derslerimi Tara</span>
+  </button>
+
+  <div id="status" class="status" role="status" hidden></div>
+
+  <section id="result" class="result" hidden>
+    <div class="result-head">
+      <span id="count"></span>
+      <button id="toggleAll" class="link">Hiçbirini seçme</button>
+    </div>
+    <ul id="list" class="list"></ul>
+    <button id="save" class="btn btn-go">
+      <span class="btn-label">Takvim dosyasını indir</span>
+    </button>
+  </section>
+</main>
+
+<script src="popup.js"></script>
+</body>
+</html>

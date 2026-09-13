@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>OzUBlocks store screenshot</title>
+<style>
+  html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
+  body {
+    display: flex; align-items: center; justify-content: center; gap: 72px;
+    background: radial-gradient(circle at 20% 20%, #ffe3d9, #faf7f5 60%);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #26201d;
+  }
+  .copy { width: 440px; }
+  .copy img { width: 72px; height: 72px; border-radius: 18px; box-shadow: 0 8px 24px rgba(244,81,44,.3); }
+  h1 { font-size: 52px; margin: 24px 0 12px; letter-spacing: -0.02em; }
+  p { font-size: 22px; line-height: 1.45; color: #6e625c; margin: 0; }
+  iframe {
+    width: 380px; height: 640px; flex: none; transform-origin: center; border: 0; border-radius: 18px; background: #faf7f5;
+    box-shadow: 0 30px 80px rgba(38,32,29,.18), 0 2px 6px rgba(38,32,29,.06);
+  }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <img src="../icons/icon128.png" alt="">
+    <h1>OzUBlocks</h1>
+    <p>SIS ders programınızı tek tıkla, dönem boyunca tekrar eden bir takvim dosyasına çevirin.</p>
+  </div>
+  <iframe id="popup" src="../popup.html"></iframe>
+<script>
+  // Fills the real popup with made-up courses. Used only to make store screenshots.
+  document.getElementById("popup").addEventListener("load", (e) => {
+    const w = e.target.contentWindow;
+    const mk = (id, name, room, dow, hour) =>
+      ({ id, name, description: room + ",", dow, hour, minute: 40, lengthMs: 6600000, keep: true });
+    w.eval(`
+      courses = ${JSON.stringify([
+        mk("1", "CS 101", "EF Building Floor 2 Room 233", 1, 10),
+        mk("2", "MATH 101", "AB1 Building Floor 1 Room 104", 1, 13),
+        mk("3", "CS 101L", "EF Building Floor 4 Room 418", 2, 12),
+        mk("4", "SEC 201L", "AB2 Building Floor 1 Room 126", 2, 15),
+        mk("5", "SEC 201L", "AB2 Building Floor 1 Room 127", 2, 15),
+        mk("6", "PHYS 101", "AB1 Building Floor 3 Room 310", 3, 8),
+        mk("7", "ENG 101", "SSB Building Floor 2 Room 205", 4, 10),
+      ])};
+      render();
+      courses[4].keep = false;
+      syncRows();
+    `);
+    // Show the whole popup, down to the download button. Scale it down if it is taller than the frame.
+    const h = Math.ceil(w.document.body.getBoundingClientRect().height);
+    e.target.style.height = `${h}px`;
+    const room = 760;
+    if (h > room) e.target.style.transform = `scale(${room / h})`;
+  });
+</script>
+</body>
+</html>
