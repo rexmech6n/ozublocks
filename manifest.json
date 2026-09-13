@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "OzUBlocks",
   "version": "1.0.0",
-  "description": "Turn every class into a calendar block. Özyeğin SIS ders programınızı takvime aktarır. Üniversite ile resmî bir bağlantısı yoktur.",
+  "description": "Turn every class into a calendar block.",
   "permissions": ["scripting", "storage"],
   "host_permissions": ["https://sis.ozyegin.edu.tr/*"],
   "icons": {
