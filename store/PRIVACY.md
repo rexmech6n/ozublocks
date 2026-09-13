@@ -18,7 +18,7 @@ OzUBlocks, Özyeğin Üniversitesi SIS'teki ders programınızı bir takvim dosy
 
 OzUBlocks bağımsız bir öğrenci projesidir ve Özyeğin Üniversitesi ile resmî bir bağlantısı yoktur.
 
-İletişim: <İLETİŞİM E-POSTASI>
+İletişim: cem.baykara@ozu.edu.tr
 
 ## English
 
@@ -36,4 +36,4 @@ OzUBlocks is a browser extension that turns your Özyeğin University SIS course
 
 OzUBlocks is an independent student project. It has no official connection to Özyeğin University.
 
-Contact: <CONTACT EMAIL>
+Contact: cem.baykara@ozu.edu.tr
